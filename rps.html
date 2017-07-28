@@ -1,0 +1,142 @@
+<!--you chose
+
+
+computer ramdom  (0,1,2) out of arrray of [r,p,s]
+
+
+wins  Add 1 to win (if you = paper, comp = rock or you = scissors and comp = paper or you = rock and comp = scissors)  )
+
+
+loses Add 1 to Loss 
+ties  Add 1 to Tie if ===
+
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rock Paper Scissor</title>
+</head>
+<body>
+	<div class="wrapper">
+		<header style="text-align:center">
+			<div class="game-title">
+				<h1>Rock Paper Scissors</h1>
+				<h5>Select "r" for Rock, "p" for Paper and "s" for Scissors</h5>
+			</div>
+		</header>
+
+			<div>
+				<h2>User's chose: <span id = "user"></span></h2>
+
+			</div>
+			
+			<div>
+				<h2>Computer's chose: <span id = "comp"></span></h2>
+			</div>
+			
+			<div>
+				<h2>Wins: <span id = "win"></span></h2>
+			
+			</div>
+				<h2>Losses: <span id = "loss"></span></h2>
+			</div>
+			
+			<div>
+				<h2>Ties: <span id = "tie"></span></h2>
+			</div>
+
+			<div>
+				<button onclick="resetGame()">Reset</button>
+			</div>
+
+	</div>
+
+	<script type="text/javascript">
+
+
+
+	var human = document.getElementById("user");
+	var computer = document.getElementById("comp");
+	var winner = 0;
+	var loser = 0;
+	var tied = 0;
+	var rpsArray = ["r","p","s"];
+
+	document.onkeyup = function(event) {
+		
+		// creating Variables for Human Guess and Computer Guess
+
+		if(event.key === "r" || event.key === "p" || event.key === "s") {
+			var humanGuess = event.key;
+			user.textContent = humanGuess;
+			console.log(humanGuess);
+			var compGuess = rpsArray[Math.floor(Math.random() * rpsArray.length)];
+			console.log(compGuess);
+			comp.textContent = compGuess;
+
+
+		} else {	
+			user.textContent = "";
+			comp.textContent = "";
+		};
+		
+		if 	(user.textContent === ""){
+			return false;
+
+		}	else if (user.textContent === comp.textContent && user.textContent !== ""){
+			tied ++;
+			tie.textContent = tied;
+			console.log(tie);
+
+
+		}	else if (user.textContent === "p" && comp.textContent === "r") {
+			winner ++;
+			console.log(win);
+			win.textContent = winner;
+
+		}	else if (user.textContent === "p" && comp.textContent === "s"){
+			loser ++;
+			console.log(loss);
+			loss.textContent = loser;
+
+		}	else if (user.textContent === "r" && comp.textContent === "s"){
+			winner ++;
+			console.log(win);
+			win.textContent = winner;
+
+		}	else if (user.textContent === "r" && comp.textContent === "p"){
+			loser ++;
+			console.log(loss);
+			loss.textContent = loser;
+
+		}	else if (user.textContent === "s" && comp.textContent === "r"){
+			loser ++;
+			console.log(loss);
+			loss.textContent = loser;
+
+		}	else if (user.textContent === "s" && comp.textContent === "p"){
+			winner ++;
+			console.log(win);
+			win.textContent = winner;
+
+		}	else {
+			return false;
+		}	
+		
+	 };
+
+
+
+	 function resetGame() {
+	 	user.textContent = "";
+		comp.textContent = "";
+		win.textContent = "";
+		loss.textContent = "";
+		tie.textContent = "";
+
+	 }
+	</script>
+
+</body>
+</html>
