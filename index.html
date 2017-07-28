@@ -22,35 +22,48 @@ ties  Add 1 to Tie if ===
 		<header style="text-align:center">
 			<div class="game-title">
 				<h1>Rock Paper Scissors</h1>
-				<h4>Use your keyboard to type <br>
-				 "r" for Rock, "p" for Paper and "s" for Scissors</h4>
+				<h4>Use your keyboard to type
+				 <br>
+				 "r" for Rock, "p" for Paper and "s" for Scissors
+				 <br>
+				 <br>
+				 <i>RPS rules: "Rock Crushes Scissors, Paper Covers Rock, Scissors Cut Paper."</i>
+				</h4>
 			</div>
 		</header>
 		<section class="container" style = "margin-left: 100px">
-			<div>
-				<h2>User chose: <span id = "user"></span></h2>
+			<article>
+				<div>
+					<h2>User chose: <span id = "user"></span></h2>
 
-			</div>
-			
-			<div>
-				<h2>Computer chose: <span id = "comp"></span></h2>
-			</div>
-			
-			<div>
-				<h2>Wins: <span id = "win"></span></h2>
-			</div>
+				</div>
+				
+				<div>
+					<h2>Computer chose: <span id = "comp"></span></h2>
+				</div>
+			</article>
 
-			<div>
-				<h2>Losses: <span id = "loss"></span></h2>
-			</div>
-			
-			<div>
-				<h2>Ties: <span id = "tie"></span></h2>
-			</div>
+			<article style="border: 2px solid black; padding: 0px 0px 20px 20px; width:300px">	
+				<div style ="margin-left:50px;">
+					<h1 style="font-size: 30px">User Record</h1>
+				</div>
+				
+				<div>
+					<h2 style = "color:green">Wins: <span id = "win"></span></h2>
+				</div>
 
-			<div>
-				<button onclick="resetGame()">Reset</button>
-			</div>
+				<div>
+					<h2 style = "color:red">Losses: <span id = "loss"></span></h2>
+				</div>
+				
+				<div>
+					<h2>Ties: <span id = "tie"></span></h2>
+				</div>
+			</article>
+
+				<div style="margin: 20px">
+					<button onclick="resetGame()">Reset</button>
+				</div>
 		</section>
 	</div>
 
